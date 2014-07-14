@@ -1,0 +1,6 @@
+sapd(00:0b:86:ba:3a:f4@10.0.0.252)[147]: <404003> <WARN> |AP 00:0b:86:ba:3a:f4@10.0.0.252 sapd|  AM 00:0b:86:ba:3a:f4: Interfering AP detected with SSID AlienWireless and BSSID 00:17:df:6e:3d:b6 
+sapd(00:0b:86:ba:3a:f4@10.0.0.252)[147]: <404003> <WARN> |AP 00:0b:86:ba:3a:f4@10.0.0.252 sapd|  AM 00:0b:86:ba:3a:f4: Interfering AP detected with SSID AlienWireless and BSSID 00:17:df:6e:3d:b6 
+sapd[190]: <404081> <ERRS> |AP sanmateo@10.0.0.127 sapd|  AM 00:0b:86:61:31:60: Wireless bridge detected with Transmitter 00:03:52:e7:c5:20, Receiver 00:03:52:e7:90:30, Channel 4 and RSSI=12
+sapd[203]: <404081> <ERRS> |AP sanmateo@10.0.0.116 sapd|  AM 00:0b:86:e3:76:a0: Wireless bridge detected with Transmitter 00:14:bf:c2:c2:ce, Receiver 00:1a:e3:77:65:f0, Channel 10 and RSSI=3
+sapd[190]: <404054> <ERRS> |AP madrid@10.0.0.60 sapd|  AM 00:0b:86:62:c5:00: Disconnect-Station Attack: Deauth frame from 00:03:52:36:fe:70 is invalid, RSSI=3 DeauthSeq=1082 NormalSeq=1739 Mismatched=1 Similar=8
+sapd[148]: <404003> <WARN> |AP 00:0b:86:cb:85:db@10.0.0.14 sapd| AM 00:0b:86:38:5d:b0: Interfering AP detected with SSID 06B408550367 and BSSID 00:12:0e:33:d3:2c

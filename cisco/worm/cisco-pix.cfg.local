@@ -1,0 +1,39 @@
+;; cisco-pix
+;; plugin_id: 1514
+;; 
+;; $Id: cisco-pix.cfg,v x.x 2011/10/13 21:29:00 mramos Exp $
+;;
+;; Plugin also tested with:      http://www.ossec.net/wiki/index.php/Cisco_PIX
+;;
+;; The order rules are defined matters.
+;;
+
+[DEFAULT]
+plugin_id=1514
+
+[config]
+type=detector
+enable=yes
+
+source=log
+location=/var/log/cisco.log
+create_file=false
+
+process=
+start=no
+stop=no
+startup=
+shutdown=
+
+[AAD - cisco-asa]
+#Mar 26 15:49:21 FW-ESB2TSRD43 : %FWSM-3-106011: Deny inbound (No xlate) tcp src outside:10.0.0.70/2802 dst inside:10.0.200.1/445
+regexp="(?P<date>\S+\s+\d+\s+\d+:\d+:\d+)\s+(?P<sensor>\S+)\s+:\s+%\w+-\d-(?P<sid>\d+):\s+(?P<userdata>Deny(.+)?(from|src)\s+(\S+:)?(?P<src>\S[^/]+)/(?P<sport>\S+)\s+(to|dst)\s+(\S+:)?(?P<dst>\S[^/]+)/(?P<dport>\S+)(\s+on\s+interface\s+(?P<iface>\S+))?)"
+event_type=event
+date={normalize_date($date)}
+sensor={resolv($sensor)}        
+plugin_sid={$sid}
+src_ip={resolv($src)}
+src_port={$sport}
+dst_ip={resolv($dst)}
+dst_port={$dport}
+interface={$iface}
