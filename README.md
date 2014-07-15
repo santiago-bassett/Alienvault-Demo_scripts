@@ -1,7 +1,7 @@
 #Sripts to inject demo data and traffic
 By Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))
 
-Steps to enable a dummy network interface:
+Steps to enable dummy0 network interface:
 ```
 insmod dummy
 ifconifg dummy0 up
@@ -20,5 +20,8 @@ Plugins that need to be enabled:
 - ssh
 
 Injecting demo data:
-- Download github repo
-- Run script rundemo.sh
+```
+git clone https://github.com/santiago-bassett/Alienvault-Demo_scripts
+cd Alienvault-Demo_scripts
+nohup ./rundemo.sh & 2>&1 
+```
