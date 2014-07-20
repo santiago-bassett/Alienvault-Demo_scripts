@@ -48,6 +48,8 @@ print "Done\n";
 
 print YELLOW, "Adding Rsyslog config...", RESET;
 `cp ./misc/aa-demo.conf /etc/rsyslog.d/`;
+print CYAN, "Restarting rsyslog...", RESET;
+`service rsyslog restart`;
 print "Done\n";
 
 print CYAN, "Adding logrotate file...", RESET;
@@ -89,11 +91,14 @@ print "Adding Modified ossec.conf....";
 print "Done\n";
 
 print "Adding prads local...";
-#`cp ./misc/prads_dummy0.cfg.local /etc/ossim/agent/plugins/`;
+`cp ./assets/prads_dummy0.cfg.local /etc/ossim/agent/plugins/`;
 print "Done\n";
 
 print "Finished updating ", CYAN, "ossim_setup", RESET, ".  Running re-config...\n";
-
+`ossim-reconfig -c -v`;
+print YELLOW, "Adding assets...", RESET;
+`cat ./assets/asset-playback >> /var/log/ossim/prads-dummy0.log`;
+print CYAN, "Done!\n", RESET;
 
 	
 
