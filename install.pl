@@ -75,6 +75,7 @@ print "Adding detectors... $to_insert ....\n";
 `sed -i -e 's/detectors=.*/detectors=$to_insert/' /etc/ossim/ossim_setup.conf`;
 
 #Adding Dummy Interface..
+#I'll likely playback files with suricata, this may go away or be used only for netflow...
 my $interfaces = `grep interfaces= /etc/ossim/ossim_setup.conf`;
 my ($i) = (split /=/, $interfaces)[1];
 chomp($i);

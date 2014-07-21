@@ -17,6 +17,7 @@ inventory_source=6
 ip={$asset_ip}
 hostname={$s}
 os={$os}
+plugin_sid=2
 regexp="(?P<asset_ip>\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3});(?P<s>[^;]*);(?P<os>[^;]*)"
 
 [011 - dfgfdgdfgdfg]
