@@ -8,6 +8,7 @@ use Term::ANSIColor qw(:constants);
 #
 # 
 # This script can be run over and over
+# Just felt like using perl this time, dunno...
 
 
 my $plugin_dir = './plugins';
@@ -103,9 +104,9 @@ print CYAN, "Done!\n", RESET;
 
 print MAGENTA, "Adding in a Vulnerability Scan...", RESET;
 $ctx_query = "select hex(id) as id from acl_entities WHERE entity_type = 'context' AND parent_id = unhex('00000000000000000000000000000000')";
-$ctx = `echo $ctx_query | ossim-db | tail -1`;
+$ctx = `echo "$ctx_query" | ossim-db | tail -1`;
 chomp($ctx);
-print "Using context id: ", MAGENTA, $ctx, RESET;
+print "Using context id: ", MAGENTA, $ctx, RESET, "\n";
 `/usr/bin/perl -w /usr/share/ossim/scripts/vulnmeter/import_nbe.pl ./misc/demo.nbe dGVzdDM7OTg5OEVBNzExMDZBMTFFNDhDNzQwMDBDMjlCQzNGMDE= 1 -4 $ctx 0`;
-print "Done.'n";
+print "Done.\n";
 

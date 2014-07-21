@@ -1,10 +1,10 @@
 #!/usr/bin/perl
 
-my $num = 25;
-my $start = 55;
+my $num = 50;
+my $start = 45;
 my $range = '192.168.100.';
 my @os_list = qw/Linux
-Mac OS X
+MacOSX
 Unix
 FreeBSD
 ReactOS
@@ -13,9 +13,11 @@ OpenBSD
 AtheOS
 Darwin
 HP-UX
-Windows XP
-Windows Vista
-Windows 2008
+Android
+Linux
+WindowsXP
+WindowsVista
+Windows2008
 IOS/;
 
 my @hostnames = qw/Axiom
@@ -30,12 +32,9 @@ Glados
 Paradox
 Chromium
 Cobalt
-Copernicium
 Copper
 Curium
-Darmstadtium
 Dubnium
-Dysprosium
 Einsteinium
 Erbium
 Europium
@@ -106,15 +105,15 @@ imaps:993
 
 for (my $i = $start; $i < $num + $start; $i++) {
 	my $service_string = "%s,0,%s,%s,SERVER,[%s:d],\n";
-	my $mac = '';
+	my $mac = '00:';
 	my $ip = $range . $i;
-	$mac .= sprintf("%.2x:",rand(255)) for (1..5); 
+	$mac .= sprintf("%.2x:",rand(255)) for (1..4); 
 	$mac .= sprintf("%.2x",rand(255));
 	my $os = $os_list[rand @os_list];
 	my $username = $usernames[rand @usernames];
 	my $hostname = pop @hostnames;
 	print "$ip;$hostname;$os;$mac;$username\n";
-	for (1..rand(5)) {
+	for (1..rand(6)) {
 		my ($proto, $port) = (split /:/, $services[rand @services])[0,1];
 		printf ($service_string, $ip, $port, 6, $proto)
 	}

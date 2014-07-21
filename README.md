@@ -1,13 +1,17 @@
 #Sripts to inject demo data and traffic
 
 This will make AV do demo stuff
-Author: PacketInspector
+--Author: PacketInspector
 
-Fork of work done by
-By Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))
 
-To install
+Forked from Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))
 
-git clone [url]
-cd 
-perl install.pl
+To install:
+
+--git clone [url]
+--cd 
+--perl install.pl
+
+
+Need to start over?
+--# alienvault-reconfig -c -d -v --rebuild_db;sleep 15;perl install.pl
