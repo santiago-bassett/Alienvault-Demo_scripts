@@ -1,8 +1,8 @@
 #!/usr/bin/perl
 
 my $num = 25;
-my $start = 20;
-my $range = '192.168.1.';
+my $start = 55;
+my $range = '192.168.100.';
 my @os_list = qw/Linux
 Mac OS X
 Unix
