@@ -40,9 +40,7 @@ opendir(DIR, $plugin_dir) or die $!;
 my @logs = grep { /\.log$/ && -f "$plugin_dir/$_" } readdir(DIR);
 closedir(DIR);
 
-#random IP
-#$rip = join ".", map int rand 255, 1 .. 4;
-my $otx_grab = `shuf -n10 /etc/ossim/server/reputation.data | awk -F# '{print $1}'`;
+my $otx_grab = `shuf -n25 /etc/ossim/server/reputation.data | awk -F\# '{print \$1}'`;
 my @otx = split(/\n/, $otx_grab);
 my %clean_logs;
 
@@ -63,13 +61,18 @@ sub load_logs {
 			s/^\w{3}\s{1,2}\d{1,2}\s\d{2}\:\d{2}\:\d{2}\s+\d{4}\s+\S+\s+//;
 			#Some don't....
 			s/^\w{3}\s{1,2}\d{1,2}\s\d{2}\:\d{2}\:\d{2}\s+\S+\s+//;
-			#send_message($base,$_);
+			send_message($base,$_);
 			push(@{$clean_logs{$base}}, $_);
 		}
 	}
 }
 sub send_message {
-	my($name, $log) = @_;	
+	#send log message, changing IPs if needed....
+	my($name, $log) = @_;
+	my $rip = join ".", map int rand 255, 1 .. 4;
+	my $otx_ip = $otx[rand @otx];
+	$log =~ s/<RANDIP>/$ips/g;
+	$log =~ s/<OTXIP>/$otx_ip/g;	
 	openlog($name, '', 'lpr');    # don't forget this
 	syslog("debug", $log);
 	closelog();
