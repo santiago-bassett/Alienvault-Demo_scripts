@@ -1,7 +1,7 @@
 #Sripts to inject demo data and traffic
 
 This will make AV do demo stuff
-- Author: PacketInspector
+- Author: PacketInspector ([@pkt_inspector](https://twitter.com/pkt_inspector))
 
 
 Forked from Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))

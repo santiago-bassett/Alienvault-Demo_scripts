@@ -1,0 +1,105 @@
+0.001006 2014-06-24 SymKat <symkat@symkat.com>
+    * Allow custom reload/stop signals (hemmop)
+    * Documentation cleanup (ilmari, rwstauner)
+    * Module name POD format fixed (RT 93280)
+
+0.001005  2014-02-19 SymKat <symkat@symkat.com>
+    * Constructor now accepts a list as well as a hashref
+    * New method added: run_command, allows multiple instances of D::C
+      in the same script.  Accepts the action as an argument and returns
+      the exit code the user should exit with.
+    * do_foreground added to allow running the code ref or program w/o forking
+    * DC_FOREGROUND env will force foreground, regardless of compile-time settings
+    * foreground added to constructor -- shortcut to fork => 0, quiet => 1
+    * Calling the script without an argument results in the syntax being displayed
+    * Stray exit removed for run_command
+    * Updated documentation
+
+0.001004  2013-08-27 SymKat <symkat@symkat.com>
+    * Abort the kill loop when PID changes; Thanks, atomicstac
+
+0.001003  2013-06-12  SymKat <symkat@symkat.com>
+    * Add quiet accessor to supress pretty_print (github#51)
+
+0.001002  2013-06-11  SymKat <symkat@symkat.com>
+    * Due to checking for true values instead of define it was
+      possible to start a daemon as root by setting uid/gid to 0/0,
+      but not user/group to root/root, which would resolve to 0/0 and
+      be considered an invalid user, which it's not.
+    * Fix an encoding error in the POD resulting from Ævar Arnfjörð
+      Bjarmason contributing to the project.
+    * Tests that invoke Perl now use $^X instead of the $PATH's perl.
+    * properly write the pid file in single fork mode (github#49)
+
+0.001001  2013-04-29  SymKat <symkat@symkat.com>
+    * All 0.001001 changes brought to you by Karen Etheridge; Thanks, ether!
+    * create dir for pid_file if it does not exist
+    * fix uninitialized warning in error when exec fails
+    * 'stop' is now faster when kill_timeout is set to high values, by checking
+      every second if the daemon has terminated rather than waiting for the
+      full kill_timeout duration
+    * new option: prereq_no_process
+    * stdout is flushed immediately when diagnostic output is printed
+
+0.001000  2013-02-26  SymKat <symkat@symkat.com>
+    * fixed a warning on "uninitialized value $called_with in substitution"
+      (Kromg)
+
+    * include the date and module version in the generated init file
+      (Karen Etheridge)
+
+    * warn is used rather than printing to STDERR
+    * new commands: help, reload
+    * new options: kill_timeout, umask, init_code, do_help
+    * new functions: do_help, do_reload, trace
+    * pid file is now written as the current user, then chowned to the target user
+    * pid file is now written when single-forking
+    * gid is calculated when not provided but the uid is, avoiding some
+      warnings
+
+0.000009  2012-04-19 SymKat <symkat@symkat.com>
+    * Stole Moo's MANIFEST.SKIP
+
+0.000008  2012-04-19 SymKat <symkat@symkat.com>
+    * Added Makefile to MANIFEST.SKIP
+
+0.000007  2012-04-15 SymKat <symkat@symkat.com>
+    * Added user and group accessors to set uid/gid based on names
+    * Updated docs.
+
+0.000006  2012-04-15 SymKat <symkat@symkat.com>
+    * PID file will be deleted on do_stop
+    * PID file will be created by the target user when ->uid set
+    * uid() and gid() now take strings as well (doherty)
+    * Kill signal order changed to TERM TERM INT KILL
+    * init_config option added, gives LSB script a file to source.
+    * Typo fixes
+    * Mike Doherty (doherty) added to contrib (Thank you!)
+
+0.000005  2012-02-18 SymKat <symkat@symkat.com>
+    * Fixed an issue with the inital PID being invalid.
+    * Added directory accessor to support chdir before exec.
+    * Minor documentation changes
+
+0.000004  2012-02-18 SymKat <symkat@symkat.com>
+    * First release to cpan.
+    * Refactoring and review by Matt S. Trout
+    * I really changed the version this time!
+
+0.000003  2012-02-18 SymKat <symkat@symkat.com>
+    * Test added for show_warnings.
+    * Documentation updated for 0.0.2 changes.
+    * Version changed this time.
+
+0.000002  2012-02-18 SymKat <symkat@symkat.com>
+    * Default fork mode changed to double.
+    * Added show_warnings command instead of alerting
+      about DWIM actions.
+    * Fatal warnings changed from warn+exit to die (exits non-zero)
+    * _fork handles undef/cannot fork.
+    * $self->redirect_filehandles added
+    * redirect_before_fork added (default 1)
+    * With a code ref, $self is passed (can $control->redriect_filehandles)
+
+0.000001 2012-02-02 SymKat <symkat@symkat.com>
+    * Inital Commit

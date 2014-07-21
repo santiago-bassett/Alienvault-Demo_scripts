@@ -7,7 +7,7 @@ use Term::ANSIColor qw(:constants);
 #  Asset stuff in ./assets/
 #
 # 
-# This script can be run over and over
+# This script can be run over and over, so when in doubt just re-run this...
 # Just felt like using perl this time, dunno...
 
 
@@ -102,11 +102,20 @@ print YELLOW, "Adding assets...", RESET;
 `cat ./assets/asset-playback >> /var/log/ossim/prads-dummy0.log`;
 print CYAN, "Done!\n", RESET;
 
-print MAGENTA, "Adding in a Vulnerability Scan...", RESET;
-$ctx_query = "select hex(id) as id from acl_entities WHERE entity_type = 'context' AND parent_id = unhex('00000000000000000000000000000000')";
-$ctx = `echo "$ctx_query" | ossim-db | tail -1`;
-chomp($ctx);
-print "Using context id: ", MAGENTA, $ctx, RESET, "\n";
-`/usr/bin/perl -w /usr/share/ossim/scripts/vulnmeter/import_nbe.pl ./misc/demo.nbe dGVzdDM7OTg5OEVBNzExMDZBMTFFNDhDNzQwMDBDMjlCQzNGMDE= 1 -4 $ctx 0`;
-print "Done.\n";
+
+print MAGENTA, "Checking for vulnscan...", RESET;
+
+$check_query = "select report_id from vuln_nessus_reports WHERE name = 'test3';";
+$is_added = `echo "$check_query" | ossim-db`;
+if (length($is_added)) {
+	print "Scan already there...skipping\n";
+} else {
+	print MAGENTA, "Adding in a Vulnerability Scan...", RESET;
+	$ctx_query = "select hex(id) as id from acl_entities WHERE entity_type = 'context' AND parent_id = unhex('00000000000000000000000000000000')";
+	$ctx = `echo "$ctx_query" | ossim-db | tail -1`;
+	chomp($ctx);
+	print "Using context id: ", MAGENTA, $ctx, RESET, "\n";
+	`/usr/bin/perl -w /usr/share/ossim/scripts/vulnmeter/import_nbe.pl ./misc/demo.nbe dGVzdDM7OTg5OEVBNzExMDZBMTFFNDhDNzQwMDBDMjlCQzNGMDE= 1 -4 $ctx 0`;
+}
+print "All Done.\n";
 
