@@ -104,7 +104,7 @@
 192.168.100.73,0,636,6,SERVER,[ldaps:d],
 192.168.100.73,0,993,6,SERVER,[imaps:d],
 192.168.100.73,0,443,6,SERVER,[https:d],
-192.168.100.74;Germanium;AtheOS;00:68:4b:17:24:90;mary
+192.168.100.74;Germanium;Linux;00:68:4b:17:24:90;mary
 192.168.100.75;Gallium;MacOSX;00:6c:ab:72:be:ab;john
 192.168.100.75,0,514,6,SERVER,[syslog:d],
 192.168.100.75,0,22,6,SERVER,[ssh:d],

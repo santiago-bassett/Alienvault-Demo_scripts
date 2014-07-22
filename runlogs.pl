@@ -41,7 +41,7 @@ sub goforever () {
 	while (1) {
 		send_logs(%clean_logs);
 		print "Logs sent. Sleeping...\n";
-		sleep(300);
+		sleep(480);
 	}
 }
 

@@ -12,6 +12,6 @@ while true
 do
 	for pcap in `ls *.pcap`
 	do
-		tcpreplay -i dummy0 --pps=3 $pcap
+		tcpreplay-edit -N '10.0.0.0/8:192.168.100.76/30,192.168.0.0/16:192.168.100.74/31' -i dummy0 --pps=12 $pcap
 	done
 done
