@@ -118,7 +118,7 @@ if (length($is_added)) {
 	`/usr/bin/perl -w /usr/share/ossim/scripts/vulnmeter/import_nbe.pl ./misc/demo.nbe dGVzdDM7OTg5OEVBNzExMDZBMTFFNDhDNzQwMDBDMjlCQzNGMDE= 1 -4 $ctx 0`;
 }
 
-print BLUE, "Stopping the generators...\n", RESET;
+print BLUE, "Stopping the generators...You may see errors if this is the first run.\n", RESET;
 `service runlogs stop`;
 `service runpcaps stop`;
 
