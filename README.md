@@ -1,12 +1,14 @@
 ##Makes an AV install a demo box for fun and potential profit
 
-demo. demo. Dance!
 - Author: PacketInspector ([@pkt_inspector](https://twitter.com/pkt_inspector))
+
 This will add named assets with properties, logged in users, netflow, vulnerability scan, and more....
 
+demo. demo. Dance!
 
 
-To install:
+
+####To install:
 
 ```
 git clone https://github.com/packetinspector/Alienvault-Demo
