@@ -9,8 +9,8 @@ This will add named assets with properties, logged in users, netflow, vulnerabil
 To install:
 
 ```
-git clone https://github.com/packetinspector/Alienvault-Demo_scripts
-cd Alienvault-Demo_scripts
+git clone https://github.com/packetinspector/Alienvault-Demo
+cd Alienvault-Demo
 perl install.pl
 ```
 
