@@ -64,6 +64,10 @@ They will be separated by plugin.  A logrotate script for them is installed auto
 
 ![ScreenShot](https://raw.githubusercontent.com/packetinspector/Alienvault-Demo/master/screenshots/image2.png)
 
+-
+
+![ScreenShot](https://raw.githubusercontent.com/packetinspector/Alienvault-Demo/master/screenshots/image6.png)
+
 
 Forked from Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))
 
