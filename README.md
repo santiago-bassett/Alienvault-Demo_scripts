@@ -9,8 +9,8 @@ Forked from Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobas
 To install:
 
 ```
-git clone [url]
-cd 
+git clone https://github.com/packetinspector/Alienvault-Demo_scripts
+cd Alienvault-Demo_scripts
 perl install.pl
 ```
 

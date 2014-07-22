@@ -33,9 +33,6 @@ exit Daemon::Control->new(
 
 
 
-my $otx_grab = `shuf -n100 /etc/ossim/server/reputation.data | awk -F\# '{print \$1}'`;
-my @otx = split(/\n/, $otx_grab);
-
 #goforever();
 
 #The hash will be used soon for new feature, right now it is overhead...
@@ -49,12 +46,14 @@ sub goforever () {
 }
 
 sub send_logs {
+	my $otx_grab = `shuf -n100 /etc/ossim/server/reputation.data | awk -F\# '{print \$1}'`;
+	my @otx = split(/\n/, $otx_grab);
 	my %hash = @_;
 	#print Dumper(%hash);
 	foreach my $logname (keys %hash) {
 		#print $logname;
 		foreach(@{$hash{$logname}}) {
-			send_message($logname,$_);
+			send_message($logname,$_,@otx);
 			usleep(200000);
 		}
 	}
@@ -90,7 +89,7 @@ sub load_logs {
 }
 sub send_message {
 	#send log message, changing IPs if needed....
-	my($name, $log) = @_;
+	my($name, $log, @otx) = @_;
 	my $rip = join ".", map int rand 255, 1 .. 4;
 	my $otx_ip = $otx[rand @otx];
 	$log =~ s/<RANDIP>/$rip/g;
