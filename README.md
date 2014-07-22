@@ -1,8 +1,8 @@
 ##Sripts to inject demo data and traffic
 
-This will make AV do demo stuff
+This will make AV do demo stuff. Dance!
 - Author: PacketInspector ([@pkt_inspector](https://twitter.com/pkt_inspector))
-
+This will add named assets with properties, logged in users, netflow, vulnerability scan, and more....
 
 
 
@@ -14,7 +14,7 @@ cd Alienvault-Demo_scripts
 perl install.pl
 ```
 
-The script will do all the work. Nothing to do beforehand.
+The script will do all the work. Nothing to do beforehand. Nothing to do afterhand.
 You can re-run it with no consequences
 
 Need to start over?
@@ -23,7 +23,7 @@ Need to start over?
 alienvault-reconfig -c -d -v --rebuild_db;sleep 15;perl install.pl
 ```
 
-The installer will add the generators, at them to startup, and run them.  In case you want to start/stop them yourself..
+The installer will install the generators, add them to startup, and run them.  In case you want to start/stop them yourself..
 
 ```
 /etc/init.d/runpcaps [start|stop|restart]
