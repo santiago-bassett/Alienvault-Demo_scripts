@@ -18,15 +18,6 @@ sshd[29554]: Invalid user webmaster from <OTXIP>
 sshd[29554]: pam_unix(sshd:auth): check pass; user unknown
 sshd[29554]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<OTXIP> 
 sshd[29554]: Failed password for invalid user webmaster from <OTXIP> port 45481 ssh2
-sshd[30360]: Invalid user temp from <OTXIP>
-sshd[30360]: pam_unix(sshd:auth): check pass; user unknown
-sshd[30360]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<OTXIP> 
-sshd[30360]: Failed password for invalid user temp from <OTXIP> port 45886 ssh2
-sshd[30799]: Invalid user webmaster from <OTXIP>
-sshd[30799]: pam_unix(sshd:auth): check pass; user unknown
-sshd[30799]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<OTXIP> 
-sshd[30799]: Failed password for invalid user webmaster from <OTXIP> port 46070 ssh2
-sshd[31335]: Invalid user webmaster from <OTXIP>
 sshd[31335]: pam_unix(sshd:auth): check pass; user unknown
 sshd[31335]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<OTXIP> 
 sshd[31335]: Failed password for invalid user webmaster from <OTXIP> port 46296 ssh2
@@ -42,4 +33,23 @@ sshd[32687]: Invalid user webmaster from <OTXIP>
 sshd[32687]: pam_unix(sshd:auth): check pass; user unknown
 sshd[32687]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=<OTXIP> 
 sshd[32687]: Failed password for invalid user webmaster from <OTXIP> port 46949 ssh2
+#Make bruteforce
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+sshd[32297]: Failed password for invalid user root from 24.34.23.12 port 46766 ssh2
+
 

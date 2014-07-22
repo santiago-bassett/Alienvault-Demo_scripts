@@ -117,5 +117,24 @@ if (length($is_added)) {
 	print "Using context id: ", MAGENTA, $ctx, RESET, "\n";
 	`/usr/bin/perl -w /usr/share/ossim/scripts/vulnmeter/import_nbe.pl ./misc/demo.nbe dGVzdDM7OTg5OEVBNzExMDZBMTFFNDhDNzQwMDBDMjlCQzNGMDE= 1 -4 $ctx 0`;
 }
-print "All Done.\n";
+
+print BLUE, "Stopping the generators...\n", RESET;
+`service runlogs stop`;
+`service runpcaps stop`;
+
+print BLUE, "Adding the generators...\n", RESET;
+`chmod 755 ./runlogs.pl`;
+`chmod 755 ./runpcaps.pl`;
+`./runlogs.pl get_init_file > /etc/init.d/runlogs`;
+`./runpcaps.pl get_init_file > /etc/init.d/runpcaps`;
+`chmod 755 /etc/init.d/runlogs`;
+`chmod 755 /etc/init.d/runpcaps`;
+print BLUE, "Adding the generators to startup...\n", RESET;
+`update-rc.d runlogs defaults`;
+`update-rc.d runpcaps defaults`;
+print BLUE, "Starting Generators...\n", RESET;
+`service runlogs start`;
+`service runpcaps start`;
+
+print "All Done. Really that's it.  Login and enjoy.\n";
 
