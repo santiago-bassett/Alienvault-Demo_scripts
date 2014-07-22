@@ -1,6 +1,6 @@
-##Sripts to inject demo data and traffic
+##Makes an AV install a demo box for fun and potential profit
 
-This will make AV do demo stuff. Dance!
+demo. demo. Dance!
 - Author: PacketInspector ([@pkt_inspector](https://twitter.com/pkt_inspector))
 This will add named assets with properties, logged in users, netflow, vulnerability scan, and more....
 
@@ -53,7 +53,7 @@ You can have IPs substituted for you automatically by adding a variable into you
 #### Where are all the logfiles going?
 All the generated log files are put in
 `/var/log/demologs`
-They will be seperated by plugin.  A logrotate script for them is installed automatically. 
+They will be separated by plugin.  A logrotate script for them is installed automatically. 
 
 Forked from Santiago Bassett ([@santiagobassett](https://twitter.com/santiagobassett))
 
