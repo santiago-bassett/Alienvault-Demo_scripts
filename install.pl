@@ -102,7 +102,7 @@ print YELLOW, "Adding assets...", RESET;
 #This makes the agent wake up.  Putting these in their own place so pcaps dont change things.
 `mkdir /var/log/demologs` if (!-d "/var/log/demologs");
 `touch /var/log/demologs/prads.log`;
-`sleep 1`;
+`sleep 5`;
 `cat ./assets/asset-playback >> /var/log/demologs/prads.log`;
 print CYAN, "Done!\n", RESET;
 
