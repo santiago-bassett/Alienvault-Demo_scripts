@@ -98,11 +98,12 @@ print "Done\n";
 
 print "Finished updating ", CYAN, "ossim_setup", RESET, ".  Running re-config...\n";
 `ossim-reconfig -c -v`;
+print "Waiting a bit for reconfig...\n";
+`sleep 10`;
 print YELLOW, "Adding assets...", RESET;
 #This makes the agent wake up.  Putting these in their own place so pcaps dont change things.
 `mkdir /var/log/demologs` if (!-d "/var/log/demologs");
 `touch /var/log/demologs/prads.log`;
-`sleep 10`;
 `cat ./assets/asset-playback >> /var/log/demologs/prads.log`;
 `sleep 2`;
 `cat ./assets/asset-playback >> /var/log/demologs/prads.log`;
