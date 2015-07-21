@@ -19,7 +19,7 @@ closedir(DIR);
 
 #Installing tcpreplay. Removed in 5.1, we need it back
 print "Installing tcpreplay....\n";
-`apt-get install tcpreplay`;
+`apt-get -y install tcpreplay`;
 print "Done.\n";
 
 
