@@ -1,0 +1,48 @@
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302016: Teardown UDP connection 595155 for outside:192.168.100.69/61960 to inside:192.168.100.55/53 duration 0:00:00 bytes 158 (demouser)
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302016: Teardown UDP connection 595156 for outside:192.168.100.69/50338 to inside:192.168.100.55/53 duration 0:00:00 bytes 160 (demouser)
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302016: Teardown UDP connection 595157 for outside:192.168.100.69/56637 to inside:192.168.100.55/53 duration 0:00:00 bytes 162 (demouser)
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302015: Built inbound UDP connection 595141 for outside:192.168.100.69/59358 (192.168.100.69/59358) to inside:192.168.100.55/53 (192.168.100.55/53) (demouser)
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302015: Built inbound UDP connection 595142 for outside:<OTXIP>/54440 (<OTXIP>/54440) to inside:192.168.100.55/53 (192.168.100.55/53) (demouser)
+Apr 10 15:36:00 10.2.2.169 %ASA-6-302015: Built inbound UDP connection 595143 for outside:<OTXIP>/59374 (<OTXIP>/59374) to inside:192.168.100.55/53 (192.168.100.55/53) (demouser)
+Apr 10 15:37:57 10.2.2.169 %ASA-6-302014: Teardown TCP connection 595239 for outside:192.168.100.69/59238 to inside:192.168.100.71/5900 duration 0:00:30 bytes 0 SYN Timeout (demouser)
+Apr 10 15:38:29 10.2.2.169 %ASA-6-302014: Teardown TCP connection 595257 for outside:192.168.100.69/59239 to inside:192.168.100.71/5900 duration 0:00:30 bytes 0 SYN Timeout (demouser)
+Apr 10 19:56:04 10.2.2.169 %ASA-6-302014: Teardown TCP connection 606994 for outside:192.168.100.69/60896 to inside:10.9.24.250/3389 duration 0:00:05 bytes 2560 TCP FINs (demouser)
+Apr 10 15:35:59 10.2.2.169 %ASA-4-722051: Group <Group VPN Network Services> User <demouser> IP <71.86.229.252> Address <192.168.100.69> assigned to session
+Apr 10 15:35:57 10.2.2.169 %ASA-7-734003: DAP: User demouser, Addr 71.86.229.252: Session Attribute aaa.radius["25"]["1"] = Group VPN Programmer,Group VPN Web Design,Group VPN Network Services
+Apr 10 15:35:57 10.2.2.169 %ASA-7-734003: DAP: User demouser, Addr 71.86.229.252: Session Attribute aaa.cisco.grouppolicy = Group VPN Network Services
+Apr 10 19:55:43 10.2.2.169 %ASA-7-734003: DAP: User demouser, Addr 68.187.64.79: Session Attribute aaa.radius["25"]["1"] = Group VPN Programmer,Group VPN Web Design,Group VPN Network Services
+Apr 10 15:37:27 10.2.2.169 %ASA-6-302013: Built inbound TCP connection 595239 for outside:<OTXIP>/59238 (<OTXIP>/59238) to inside:192.168.100.71/5900 (192.168.100.71/5900) (demouser)
+Apr 10 15:37:59 10.2.2.169 %ASA-6-302013: Built inbound TCP connection 595257 for outside:<OTXIP>/59239 (<OTXIP>/59239) to inside:192.168.100.71/5900 (192.168.100.71/5900) (demouser)
+May 24 14:05:20 141.110.190.4 %ASA-4-113019: Group = VPN_User, Username = superm, IP = 77.191.113.13, Session disconnected. Session Type: SSL, Duration: 0h:32m:27s, Bytes xmt: 21569001, Bytes rcv: 3432044, Reason: User Requested 
+May 24 14:16:43 testbox %ASA-5-111010: User 'cisco', running 'N/A' from IP 192.168.100.71, executed 'write memory' 
+May 24 13:52:32 141.110.190.4 %ASA-6-716059: Group <VPN_User> User <superm> IP <2.240.123.69> AnyConnect session resumed connection from IP <2.240.123.69>. 
+Mar 28 12:01:35 testbox %ASA-6-302014: Teardown TCP connection 144527 for outside:<RANDIP>/4743 to inside:10.18.144.10/10011 duration 0:00:13 bytes 23810 TCP Reset-O (anht)
+Mar 28 12:01:19 testbox %ASA-6-302014: Teardown TCP connection 144524 for outside:172.31.184.254/2452 to inside:10.224.64.1/2748 duration 0:00:00 bytes 0 TCP FINs (pac)
+Mar 28 12:00:52 testbox %ASA-6-302014: Teardown TCP connection 144488 for outside:<RANDIP>/4734 to inside:10.0.116.22/80 duration 0:00:21 bytes 1438 TCP FINs (anht)
+Mar 28 12:01:22 testbox %ASA-4-419001: Dropping TCP packet from inside:10.18.144.10/10011 to outside:<RANDIP>/4743, reason: MSS exceeded, MSS 1260, data 1460
+Aug 20 05:52:09 ASA-84560-4246 %ASA-2-106007: Deny inbound UDP from 192.195.204.11/56586 to <OTXIP>/53 due to DNS Query
+Aug 20 05:59:37 ASA-149195-4248 %ASA-6-734001: DAP: User Flor3171, Addr 72.78.207.231, Connection AnyConnect: The following DAP records were selected for this connection: DfltAccessPolicy#012 
+Aug 20 05:59:17 10.200.5.3 %ASA-5-722033: Group <PF-Remote-Desktop> User <hitc3288> IP <96.245.65.48> First UDP SVC connection established for SVC session.
+Aug 20 05:59:43 ASA-149195-4248 %ASA-5-722033: Group <PF-Remote-Desktop> User <Flor3171> IP <<OTXIP>> First TCP SVC connection established for SVC session.
+Aug 20 06:15:31 ASA-149195-4248 %ASA-7-713221: Group = 204.232.243.189, IP = 204.232.243.189, Static Crypto Map check, checking map = demo, seq = 40...
+Aug 20 06:20:02 10.200.5.3 %ASA-4-113019: Group = DEMO-Laptop-PhoneFactor, Username = loug3814, IP = 68.80.169.105, Session disconnected. Session Type: SSL, Duration: 0h:03m:14s, Bytes xmt: 995503, Bytes rcv: 530359, Reason: User Requested
+Aug 20 07:35:12 10.200.5.3 %ASA-4-338008: Dynamic Filter dropped blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<RANDIP>/80 (<RANDIP>/80), destination <RANDIP> resolved from dynamic list: <RANDIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 07:35:15 10.200.5.3 %ASA-4-338008: Dynamic Filter dropped blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<RANDIP>/80 (<RANDIP>/80), destination <RANDIP> resolved from dynamic list: <RANDIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 07:35:21 10.200.5.3 %ASA-4-338008: Dynamic Filter dropped blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<OTXIP>/80 (<OTXIP>/80), destination <OTXIP> resolved from dynamic list: <OTXIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 07:35:12 10.200.5.3 %ASA-4-338004: Dynamic Filter monitored blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<RANDIP>/80 (<RANDIP>/80), destination <RANDIP> resolved from dynamic list: <RANDIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 07:35:15 10.200.5.3 %ASA-4-338004: Dynamic Filter monitored blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<RANDIP>/80 (<RANDIP>/80), destination <RANDIP> resolved from dynamic list: <RANDIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 07:35:21 10.200.5.3 %ASA-4-338004: Dynamic Filter monitored blacklisted TCP traffic from inside:192.168.100.76/56450 (<RANDIP>/56450) to outside:<RANDIP>/80 (<RANDIP>/80), destination <RANDIP> resolved from dynamic list: <RANDIP>/255.255.255.255, threat-level: very-high, category: Malware
+Aug 20 06:40:50 10.200.5.3 %ASA-5-713050: Group = 206.65.171.137, IP = 206.65.171.137, Connection terminated for peer 206.65.171.137.  Reason: IPSec SA Idle Timeout  Remote Proxy 206.65.166.0, Local Proxy 10.200.99.23
+Aug 20 06:40:50 10.200.5.3 %ASA-5-713259: Group = 206.65.171.137, IP = 206.65.171.137, Session is being torn down. Reason: Idle Timeout
+Aug 20 06:50:10 ASA-149195-4248 %ASA-5-713259: Group = 204.232.243.189, IP = 204.232.243.189, Session is being torn down. Reason: Idle Timeout
+Aug 20 06:57:50 10.200.5.3 %ASA-5-713259: Group = 69.67.67.14, IP = 69.67.67.14, Session is being torn down. Reason: Max time exceeded
+Aug 20 06:05:29 1BCAPFWL01 %ASA-3-313001: Denied ICMP type=8, code=0 from 95.66.141.13 on interface outside
+Aug 20 10:00:40 ASA-84560-4246 %ASA-5-611103: User logged out: Uname: demo_infosec
+Aug 20 10:00:46 ASA-149195-4248 %ASA-5-611103: User logged out: Uname: demo_infosec
+Aug 20 10:00:02 10.200.5.3 %ASA-6-605005: Login permitted from 192.168.100.40/52035 to inside:10.200.5.3/ssh for user "demo_infosec"
+Aug 20 10:00:02 ASA-84560-4246 %ASA-6-605005: Login permitted from 192.168.100.40/52039 to inside:10.240.5.3/ssh for user "demo_infosec"
+Aug 20 10:00:02 1BCAPFWL01 %ASA-6-605005: Login permitted from 192.168.100.40/52038 to inside:10.192.5.3/ssh for user "demo_infosec"
+Aug 20 10:00:06 10.200.5.3 %ASA-5-502103: User priv level changed: Uname: demo_infosec From: 1 To: 15
+Aug 20 10:00:06 ASA-84560-4246 %ASA-5-502103: User priv level changed: Uname: demo_infosec From: 1 To: 15
+Aug 20 07:00:01 10.200.5.3 %ASA-6-303002: FTP connection from inside:192.168.100.29/3331 to outside:<RANDIP>/21, user demoftp Retrieved file demogl.pgp
+Aug 20 07:00:01 10.200.5.3 %ASA-6-303002: FTP connection from inside:192.168.100.29/3330 to outside:<RANDIP>/21, user demoftp Retrieved file demodda.pgp

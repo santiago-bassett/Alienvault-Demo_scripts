@@ -17,6 +17,12 @@ opendir(DIR, $plugin_dir) or die $!;
 my @plugins = grep { /\.cfg$/ && -f "$plugin_dir/$_" } readdir(DIR);
 closedir(DIR);
 
+#Installing tcpreplay. Removed in 5.1, we need it back
+print "Installing tcpreplay....\n";
+`apt-get install tcpreplay`;
+print "Done.\n";
+
+
 #Save names for ossim_setup
 my @plugin_names;
 
