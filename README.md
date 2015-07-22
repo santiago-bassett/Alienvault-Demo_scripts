@@ -15,6 +15,10 @@ git clone https://github.com/packetinspector/Alienvault-Demo
 cd Alienvault-Demo
 perl install.pl
 ```
+####Fast Install:
+```
+apt-get -y install git;git clone https://github.com/packetinspector/Alienvault-Demo;cd Alienvault-Demo/;perl install.pl
+```
 
 The script will do all the work. Nothing to do beforehand. Nothing to do afterhand.
 You can re-run it with no consequences
