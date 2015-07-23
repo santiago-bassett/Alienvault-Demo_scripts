@@ -148,6 +148,8 @@ print BLUE, "Adding the generators to startup...\n", RESET;
 print BLUE, "Starting Generators...\n", RESET;
 `service runlogs start`;
 `service runpcaps start`;
+print GREEN, "Adding Assets Again...\n", RESET;
+`cat ./assets/asset-playback >> /var/log/demologs/prads.log`;
 
 print "All Done. Really that's it.  Login and enjoy.\n";
 
