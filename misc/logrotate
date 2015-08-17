@@ -1,4 +1,4 @@
-/var/log/demologs/*
+/var/log/demologs/*.log
 {
         rotate 4
         daily
