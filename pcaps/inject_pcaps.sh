@@ -12,7 +12,7 @@ while true
 do
 	for pcap in `ls *.pcap`
 	do
-		tcpreplay-edit -N '10.0.0.0/8:192.168.100.76/30,192.168.0.0/16:192.168.100.74/28' -i dummy0 --pps=10 $pcap
+		tcpreplay-edit -T nano -N '10.0.0.0/8:192.168.100.76/30,192.168.0.0/16:192.168.100.74/28' -i dummy0 --pps=10 $pcap
 	done
 	sleep 1200
 done
