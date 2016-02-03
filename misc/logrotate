@@ -1,0 +1,14 @@
+/var/log/demologs/*.log
+{
+        rotate 4
+        daily
+        missingok
+        notifempty
+        compress
+        delaycompress
+        sharedscripts
+        postrotate
+                invoke-rc.d rsyslog reload > /dev/null
+        endscript
+}
+

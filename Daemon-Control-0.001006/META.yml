@@ -1,0 +1,31 @@
+---
+abstract: 'Create init scripts in Perl'
+author:
+  - '=over 4'
+build_requires:
+  ExtUtils::MakeMaker: 6.59
+  Test::More: '0.88'
+configure_requires:
+  ExtUtils::MakeMaker: 6.59
+distribution_type: module
+dynamic_config: 1
+generated_by: 'Module::Install version 1.08'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Daemon-Control
+no_index:
+  directory:
+    - inc
+    - t
+requires:
+  Cwd: 0
+  File::Path: '2.08'
+  File::Spec: 0
+  POSIX: 0
+  perl: 5.8.1
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: git://github.com/symkat/Daemon-Control.git
+version: '0.001006'
