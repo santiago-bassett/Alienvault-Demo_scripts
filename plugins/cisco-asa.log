@@ -46,3 +46,29 @@ Aug 20 10:00:06 10.200.5.3 %ASA-5-502103: User priv level changed: Uname: demo_i
 Aug 20 10:00:06 ASA-84560-4246 %ASA-5-502103: User priv level changed: Uname: demo_infosec From: 1 To: 15
 Aug 20 07:00:01 10.200.5.3 %ASA-6-303002: FTP connection from inside:192.168.100.29/3331 to outside:<RANDIP>/21, user demoftp Retrieved file demogl.pgp
 Aug 20 07:00:01 10.200.5.3 %ASA-6-303002: FTP connection from inside:192.168.100.29/3330 to outside:<RANDIP>/21, user demoftp Retrieved file demodda.pgp
+Apr  9 07:26:09 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'configure t' command.
+Apr  9 07:27:36 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'logging trap notifications' command.
+Apr  9 07:27:39 10.1.1.1 %ASA-5-111001: Begin configuration: console writing to memory
+Apr  9 07:27:41 10.1.1.1 %ASA-5-111004: console end configuration: OK
+Apr  9 07:27:41 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'write memory' command.
+Apr  9 07:27:44 10.1.1.1 %ASA-5-111005: console end configuration: OK
+Apr 10 18:47:07 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'logging trap notifications' command.
+Apr 10 18:47:10 10.1.1.1 %ASA-5-111001: Begin configuration: console writing to memory
+Apr 10 18:47:12 10.1.1.1 %ASA-5-111004: console end configuration: OK
+Apr 10 18:47:12 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'write memory' command.
+Apr 10 18:49:06 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'no access-list OUTSIDE_IN extended permit tcp any host 10.1.1.1 eq ssh' command.
+Apr 10 18:50:26 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'access-list OUTSIDE_IN extended permit tcp any host 10.1.1.1 eq ssh' command.
+Apr 10 18:51:59 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'access-group OUTSIDE_IN in interface outside' command.
+Apr 10 18:52:04 10.1.1.1 %ASA-5-111001: Begin configuration: console writing to memory
+Apr 10 18:52:06 10.1.1.1 %ASA-5-111004: console end configuration: OK
+Apr 10 18:52:06 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'write memory' command.
+Apr 10 19:09:30 10.1.1.1 %ASA-4-411001: Line protocol on Interface inside, changed state to up
+Apr 10 19:09:30 10.1.1.1 %ASA-4-411001: Line protocol on Interface Ethernet0/1, changed state to up
+Apr 10 19:09:30 10.1.1.1 %ASA-4-411001: Line protocol on Interface Ethernet0/1, changed state to up
+Apr 10 19:10:28 10.1.1.1 %ASA-5-111005: console end configuration: OK
+Apr 10 21:46:34 10.1.1.1 %ASA-4-411001: Line protocol on Interface inside, changed state to up
+Apr 10 21:46:34 10.1.1.1 %ASA-4-411001: Line protocol on Interface Ethernet0/1, changed state to up
+Apr 10 21:46:34 10.1.1.1 %ASA-4-411001: Line protocol on Interface Ethernet0/1, changed state to up
+Apr 10 21:46:44 10.1.1.1 %ASA-5-111007: Begin configuration: console reading from terminal
+Apr 10 21:46:44 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'configure terminal' command.
+Apr 10 21:49:37 10.1.1.1 %ASA-5-111008: User 'enable_15' executed the 'access-list OUTSIDE_IN extended permit tcp any host 10.1.1.20 eq 22' command.

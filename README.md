@@ -6,18 +6,21 @@ This will add named assets with properties, logged in users, netflow, vulnerabil
 
 demo. demo. Dance!
 
+This is a clone of the collaborative repository created by PacketInspector and Santiago Bassett, with the addition of a few Sonicwall events, and Cisco ASA events, used in writing a SANS gold paper: OSSIM: CIS Critical Security Controls Assessment in a Windows Environment.  I do hope to add some OSSEC events as time permits.  Many thanks to Joe and Santi for their great work on these scripts!
 
+The original Alienvault-Demo_scripts repo is here:  https://github.com/santiago-bassett/Alienvault-Demo_scripts
 
 ####To install:
 
 ```
-git clone https://github.com/packetinspector/Alienvault-Demo
+git clone https://github.com/kgeil/Alienvault-Demo_scripts
 cd Alienvault-Demo
 perl install.pl
 ```
 ####Fast Install:
 ```
-apt-get -y install git;git clone https://github.com/packetinspector/Alienvault-Demo;cd Alienvault-Demo/;perl install.pl
+apt-get -y install git;git clone https://github.com/kgeil/Alienvault-Demo_scripts;cd Alienvault-Demo/;perl install.pl; sonicwall/convert_sonicwall.sh 
+#the convert_sonicwall.sh script just changes the date on sonicwall events to today().  If I have the time, I hope to figure out why Santiago Basset's read_sonicwall.sh script isn't working with my data.  I think it needs to run through the clean_logs function in runlogs.pl, but I need to finish editing this paper and get it out the door first...
 ```
 
 The script will do all the work. Nothing to do beforehand. Nothing to do afterhand.
